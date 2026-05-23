@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Enquiry | Cafe at Bayliss</title>
+    <meta name="description" content="Order enquiry demo form for Cafe at Bayliss in Heritage Park QLD.">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="order" data-depth="../">
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../" class="nav-logo">
+                <img src="../images/logo.jpg" alt="Cafe at Bayliss logo" class="nav-logo-img">
+                <span>Cafe <strong>@ Bayliss</strong></span>
+            </a>
+            <div class="nav-actions">
+                <a href="https://www.facebook.com/p/Cafe-at-Bayliss-61572877991810/" target="_blank" rel="noopener" class="nav-action nav-action--facebook" aria-label="Cafe at Bayliss on Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/explore/locations/263566137/cafe-bayliss/" target="_blank" rel="noopener" class="nav-action nav-action--instagram" aria-label="Cafe at Bayliss on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="tel:+61738037897" class="nav-action nav-action--phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="order-page">
+        <div class="container order-layout">
+            <div class="order-copy">
+                <a href="../" class="back-link" style="background: var(--gold-dark); border-color: var(--gold-dark);">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to home</span>
+                </a>
+                <p class="eyebrow">Order enquiry</p>
+                <h1 class="section-title">Plan a pickup order</h1>
+                <p class="section-lead">This enquiry form is ready for future wiring. For a real order today, call the cafe.</p>
+                <a href="tel:+61738037897" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Call (07) 3803 7897</a>
+            </div>
+
+            <div class="order-card">
+                <form class="order-form" id="orderForm">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="customerName">Your name</label>
+                            <input id="customerName" name="customerName" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="customerPhone">Phone number</label>
+                            <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="orderType">Order type</label>
+                            <select id="orderType" name="orderType">
+                                <option>Regular pickup</option>
+                                <option>Group order</option>
+                                <option>Catering enquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="quantity">Quantity</label>
+                            <input id="quantity" name="quantity" type="number" min="1" value="1">
+                        </div>
+                        <div class="form-field form-field--full">
+                            <label for="orderItem">Item or request</label>
+                            <textarea id="orderItem" name="orderItem" required placeholder="e.g. 2 chicken burgers with chips, 1 vanilla milkshake"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <label for="pickupDate">Pickup date</label>
+                            <input id="pickupDate" name="pickupDate" type="date">
+                        </div>
+                        <div class="form-field">
+                            <label for="pickupTime">Pickup time</label>
+                            <input id="pickupTime" name="pickupTime" type="time">
+                        </div>
+                        <div class="form-field form-field--full">
+                            <label for="orderNotes">Notes</label>
+                            <textarea id="orderNotes" name="orderNotes" placeholder="Allergies, preferred sauces, add-ons or pickup notes"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <span>Prepare enquiry</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="order-message" id="orderMessage" hidden></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../menu-data.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
